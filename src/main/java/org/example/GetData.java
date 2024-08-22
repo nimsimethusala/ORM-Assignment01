@@ -20,7 +20,10 @@ public class GetData {
         Transaction transaction = session.beginTransaction();
 
         Student student1 = session.get(student.getClass(), 1);
-        System.out.println(student1);
+        System.out.println(student1.getId());
+        System.out.println(student1.getName().getFirstName());
+        System.out.println(student1.getName().getLastName());
+        System.out.println(student1.getAddress());
 
         transaction.commit();
         session.close();
